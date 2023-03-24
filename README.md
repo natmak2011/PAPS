@@ -2,7 +2,8 @@
 ## Passport Application and Payment System
 
 ### Group Name: Ingenuity 
-Description of the group name : Ingenuity, nicknamed Ginny, is a small robotic helicopter operating on Mars. It is part of NASA's Mars 2020 mission, along with the Perseverance rover, which landed with Ingenuity attached to its underside on February 18, 2021. The helicopter was deployed to the surface on April 3, 2021. [Ingenuity (helicopter) - Wikipedia]
+#### Description of the group name : 
+Ingenuity, nicknamed Ginny, is a small robotic helicopter operating on Mars. It is part of NASA's Mars 2020 mission, along with the Perseverance rover, which landed with Ingenuity attached to its underside on February 18, 2021. The helicopter was deployed to the surface on April 3, 2021. [Ingenuity (helicopter) - Wikipedia]
 Similar to Ingenuity : inventiveness, creativity, imagination, originality, innovation [ingenuity - Google Search]
 ### Group members : 
 
