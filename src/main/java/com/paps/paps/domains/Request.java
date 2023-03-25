@@ -39,6 +39,7 @@ public class Request {
 
     @Column(nullable = false, unique = true)
     @NotBlank(message = "Email address cannot be empty")
+    @Email
     private String email_address;
 
     @Column(nullable = false, unique = true)
