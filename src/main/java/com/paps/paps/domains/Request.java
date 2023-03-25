@@ -61,4 +61,16 @@ public class Request {
     @Column(nullable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     @CreationTimestamp
     private LocalDateTime creation_date = LocalDateTime.now();
+
+    @Column(nullable = false)
+    @NotBlank(message = "Watchlist status cannot be empty")
+    private String watchlist_status="L";
+
+    @Column(nullable = false)
+    @NotBlank(message = "Request status cannot be empty")
+    private String request_status ="R";
+
+    @Column(nullable = false)
+    @NotBlank(message = "Payment status cannot be empty")
+    private String payment_status = "P";
 }
