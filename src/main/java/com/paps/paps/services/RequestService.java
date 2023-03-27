@@ -19,6 +19,12 @@ public class RequestService {
 
         Integer size = ValidatePassport.checkNullandLength(request.getPassport_number());
         String first2Charcters = ValidatePassport.checkPassport(request.getPassport_number());
+        Boolean checkDigits = ValidatePassport.checkDigits(request.getPassport_number());
+
+        if (!checkDigits){
+
+            throw new RuntimeException("Passport Number after <EP> must be Digits ");
+        }
 
         if (size == null) {
 

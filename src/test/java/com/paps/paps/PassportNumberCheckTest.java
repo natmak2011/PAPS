@@ -7,7 +7,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.assertj.core.util.Strings.concat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.springframework.jdbc.support.JdbcUtils.isNumeric;
 
 @SpringBootTest
 
@@ -55,22 +54,43 @@ public class PassportNumberCheckTest {
     void shouldReturnNumbersAfterTheFirstTwoCharacters() {
 
         String passportNumber = "EP0000001";
-
-        //int passportLength = passportNumber.length();
-
-//Use for loop instead -> array out of bound and Integer parse
-        String numbersStartingFrom3rd = concat(passportNumber.charAt(2), passportNumber.charAt(3),
-                passportNumber.charAt(4), passportNumber.charAt(5), passportNumber.charAt(6),
-                passportNumber.charAt(7), passportNumber.charAt(8) );
-
-        Integer numbers = Integer.valueOf(numbersStartingFrom3rd);
-        isNumeric(numbers);
-
-       // String first2CharOfPassport = ValidatePassport.checkPassport(passportNumber);
-        
-        assertEquals(isNumeric(numbers), isNumeric(0000001));
-        //assertThat((0000001, numbers);
+        //String [] numbers = new String [];
 
 
+        int passportLength = passportNumber.length();
+        int count = 0;
+
+        //String s = passportNumber.substring(2, passportLength - 1);
+
+        //assertEquals(9, passportLength);
+
+
+        for (int i = 2; i < passportNumber.length(); i++) {
+
+
+               // if ((isNumeric(Integer.parseInt(String.valueOf(passportNumber.charAt(i)))))) {
+            //if (!isLetter(passportNumber.charAt(i))) {
+
+            if (passportNumber.charAt(i) >= '0' && passportNumber.charAt(i) <= '9'){
+
+                    count++;
+
+
+                }
+
+                //assertEquals(2, count);
+
+
+
+
+        }
+
+        assertEquals(7, count);
     }
 }
+
+
+
+
+
+

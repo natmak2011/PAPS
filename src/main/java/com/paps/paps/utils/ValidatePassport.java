@@ -29,4 +29,29 @@ public class ValidatePassport {
     }
 
 
+    public static boolean checkDigits(String passportNumber) {
+
+        //String passportNumber = "EP0000001";
+
+        int passportLength = passportNumber.length();
+        int count = 0;
+
+
+        for (int i = 2; i < passportNumber.length(); i++) {
+
+
+            if (passportNumber.charAt(i) >= '0' && passportNumber.charAt(i) <= '9'){
+
+                count++;
+
+            }
+
+
+        }
+
+       return (7 == count);
+    }
 }
+
+
+
