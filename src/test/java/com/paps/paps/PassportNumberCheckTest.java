@@ -67,8 +67,7 @@ public class PassportNumberCheckTest {
         isNumeric(numbers);
 
        // String first2CharOfPassport = ValidatePassport.checkPassport(passportNumber);
-
-        //assertEquals(9, passportLength);
+        
         assertEquals(isNumeric(numbers), isNumeric(0000001));
         //assertThat((0000001, numbers);
 
