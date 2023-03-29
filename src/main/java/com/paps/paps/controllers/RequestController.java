@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 public class RequestController {
 
     @Autowired private RequestService requestService;
-    
+
     @PostMapping("/api/requests")
     public ResponseEntity<Request> createRequest (@Valid @RequestBody Request request){
 
