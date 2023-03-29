@@ -2,13 +2,12 @@ package com.paps.paps;
 
 import com.paps.paps.utils.ValidatePassport;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.assertj.core.util.Strings.concat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
-@SpringBootTest
+//@SpringBootTest
 
 public class PassportNumberCheckTest {
 
