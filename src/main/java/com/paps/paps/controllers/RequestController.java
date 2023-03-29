@@ -1,7 +1,6 @@
 package com.paps.paps.controllers;
 
 import com.paps.paps.domains.Request;
-import com.paps.paps.repository.RequestRepository;
 import com.paps.paps.services.RequestService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +15,7 @@ import org.springframework.web.bind.annotation.*;
 public class RequestController {
 
     @Autowired private RequestService requestService;
-    @Autowired private RequestRepository requestRepository;
-
+    
     @PostMapping("/api/requests")
     public ResponseEntity<Request> createRequest (@Valid @RequestBody Request request){
 
@@ -34,8 +32,8 @@ public class RequestController {
     @GetMapping("/api/requests/status")
 
 
-    public Iterable<Request> getRequestRepositorySR() {
-        return requestRepository.findAll();
+    public Iterable<Request> getAllRequests() {
+        return requestService.getAllRequests();
     }
 }
 

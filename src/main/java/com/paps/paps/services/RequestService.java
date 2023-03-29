@@ -53,5 +53,9 @@ public class RequestService {
         return requestRepository.save(request);
     }
 
+    public Iterable<Request> getAllRequests() {
+        return requestRepository.findAll();
+    }
+
 
 }
