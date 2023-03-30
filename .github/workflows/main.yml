@@ -1,4 +1,4 @@
-name: CI
+name: CI/CD PIPELINE
 
 on:
   push:
@@ -20,5 +20,18 @@ jobs:
           settings-path: ${{ github.workspace }}
           cache: maven
       - name: Build with Maven
-        run: mvn verify
+        run: mvn --batch-mode --update-snapshots verify
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy to fly.io
+    steps:
+      - uses: action/checkout@v3
+      - uses: superfly/flyctl-actions/setup-flyctl@master
+      - run: flyctl deploy --app paps
+        env:
+          FLY_API_TOKEN: ${{ secretes.FLY_API_TOKEN }}
+
+
 
