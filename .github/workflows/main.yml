@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy to fly.io
     steps:
-      - uses: action/checkout@v3
+      - uses: action/checkout@v2
       - uses: superfly/flyctl-actions/setup-flyctl@master
       - run: flyctl deploy --app paps
         env:
