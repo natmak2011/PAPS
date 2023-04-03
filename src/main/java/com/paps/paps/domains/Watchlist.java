@@ -1,18 +1,29 @@
 package com.paps.paps.domains;
+
+
 import jakarta.persistence.*;
-import jakarta.validation.constraints.*;
-import lombok.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-@Entity(name = "request")
+@Entity(name = "watchlist")
 @Data
 
-public class Request {
+public class Watchlist {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long request_id;
+    private Long watchlist_id;
+
+    @Size(max = 25)
+    @Column(nullable = false)
+    @NotBlank(message = "Court name cannot be empty")
+    private String court_name;
 
     @Size(max = 15, min = 3)
     @Column(nullable = false)
@@ -34,43 +45,41 @@ public class Request {
     private LocalDate date_of_birth;
 
     @Column(nullable = false, unique = true)
-    @NotBlank(message = "Phone number cannot be empty")
-    private String phone_number;
-
-    @Column(nullable = false, unique = true)
-    @NotBlank(message = "Email address cannot be empty")
-    @Email
-    private String email_address;
-
-    @Column(nullable = false, unique = true)
     @NotBlank(message = "Passport number cannot be empty")
     private String passport_number;
 
- /*   @Column(nullable = false, unique = true)
-    @NotBlank(message = "Passport scan must be attached")
-    private Blob scanned_passport;
-
     @Column(nullable = false, unique = true)
-    @NotBlank(message = "Photo scan must be attached")
-    private Blob upload_photo;
+    @NotBlank(message = "Court number cannot be empty")
+    private String court_number;
 
-    @Column(nullable = false, unique = true)
-    @NotBlank(message = "Id scan must be attached")
-    private Blob upload_id_photo;*/
 
     @Column(nullable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     @CreationTimestamp
     private LocalDateTime creation_date = LocalDateTime.now();
 
+
+    @Column(nullable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+    @CreationTimestamp
+    private LocalDateTime modification_date = LocalDateTime.now();
+
+    @Size(max = 15, min = 3)
+    @Column(nullable = false)
+    @NotBlank(message = "Creation user name cannot be empty")
+    private String creation_user;
+
+    @Size(max = 15, min = 3)
+    @Column(nullable = false)
+    @NotBlank(message = "Modification user name cannot be empty")
+    private String modification_user;
+
+    @Size(max = 25)
+    @Column(nullable = false)
+    @NotBlank(message = "Modification user name cannot be empty")
+    private String watchlist_action;
+
     @Column(nullable = false)
     @NotBlank(message = "Watchlist status cannot be empty")
-    private String watchlist_status="U";
+    private String watchlist_status = "A";
 
-    @Column(nullable = false)
-    @NotBlank(message = "Request status cannot be empty")
-    private String request_status ="R";
 
-    @Column(nullable = false)
-    @NotBlank(message = "Payment status cannot be empty")
-    private String payment_status = "P";
 }
