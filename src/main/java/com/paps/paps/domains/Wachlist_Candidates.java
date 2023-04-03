@@ -16,10 +16,14 @@ public class Wachlist_Candidates {
 
 
     @Id
-    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     private long request_id;
-
     private long watchlist_id;
+    private String applicant_fn;
+    private String applicant_mn;
+    private String applicant_ln;
+    private String candidate_fn;
+    private String candidate_mn;
+    private String candidate_ln;
 
 
 }
