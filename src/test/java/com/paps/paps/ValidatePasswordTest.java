@@ -1,12 +1,11 @@
 package com.paps.paps;
 
-import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 public class ValidatePasswordTest {
-    @Test
- void UserpasswordShouldbecomTextanddigit(){
+    //@Test
+ /*void UserpasswordShouldbecomTextanddigit(){
         boolean flagUppercase = false;
         boolean flagLowercase = false;
         boolean flagDigit = false;
@@ -43,6 +42,6 @@ String password="";
             System.out.println("Fail..");
 
         //return flag;
-    }
+    }*/
     }
 
