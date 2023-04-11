@@ -5,6 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import {AirplaneTicket} from "@mui/icons-material";
+import {Link} from "@mui/material";
 
 export default function Header() {
     return (
@@ -21,7 +22,9 @@ export default function Header() {
                         <AirplaneTicket />
                     </AirplaneTicket>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                        <Link href="/" color='inherit'>
                         Passport Application and Payment Service PAPS
+                        </Link>
                     </Typography>
                     <Button color="inherit">STATUS</Button>
                 </Toolbar>

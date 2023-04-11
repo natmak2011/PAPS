@@ -1,12 +1,11 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
-import Header from "./Header";
 import {TextField} from "@mui/material";
 import DatePickerJs from "./DatePcker";
 import dayjs from "dayjs";
 import Button from "@mui/material/Button";
 
-function CreateRequest() {
+const CreateRequest = () => {
 
 
     const [firstName, setFirstName] = useState('')
@@ -52,7 +51,7 @@ function CreateRequest() {
 
     return (
         <div >
-            <Header />
+
             <p> Please fill the bellow form to request for replacement passport. </p>
 
             <div> <TextField  label="First Name" variant="standard" value={firstName} required={true}  onChange={(e) => setFirstName(e.target.value)}/> </div>
