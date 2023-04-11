@@ -3,7 +3,7 @@ spring:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/paps
     username: papsadmin
-    password: Yose140087
+    password: papsadmin
   sql:
     init:
       mode: always
@@ -16,3 +16,17 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
+---
+spring:
+  mail:
+    mail:
+      host: smtp.gmail.com
+    password: mobgcqpnwfibnlzx
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    username: 'ifro.paps@gmail.com '
