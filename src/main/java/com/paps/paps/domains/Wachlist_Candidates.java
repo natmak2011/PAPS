@@ -24,6 +24,7 @@ public class Wachlist_Candidates {
     private String candidate_fn;
     private String candidate_mn;
     private String candidate_ln;
+    private long score        ;
 
 
 }
