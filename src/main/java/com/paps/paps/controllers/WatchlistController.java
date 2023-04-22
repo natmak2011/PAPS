@@ -7,10 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping
@@ -25,5 +22,12 @@ public class WatchlistController {
         Watchlist savedWatchlist = watchlistService.createWatchlist(watchlist);
 
         return new ResponseEntity<>(savedWatchlist, HttpStatus.CREATED);
+    }
+
+
+    @GetMapping("/api/watchlists")
+    public Iterable<Watchlist> getAllAccounts() {
+        return watchlistService.getAllAccounts();
+//        return accountRepository.findAll();
     }
 }

@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 public class RequestController {
 
     @Autowired private RequestService requestService;
-    //@Autowired private RequestService.EmailService emailService;
+
 
 
 
@@ -36,12 +36,13 @@ public class RequestController {
 
 
 
-    @GetMapping("/api/requests/status")
+    @GetMapping("/api/request/status")
 
 
     public Iterable<Request> getAllRequests() {
         return requestService.getAllRequests();
     }
+
 
 
 

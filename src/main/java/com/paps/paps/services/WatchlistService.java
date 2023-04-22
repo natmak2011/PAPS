@@ -17,9 +17,17 @@ public class WatchlistService {
         return watchlistRepository.save(watchlist);
     }
 
-   // public Iterable<Request> getAllRequests() {
-      //  return requestRepository.findAll();
+
+    public Iterable<Watchlist> getAllAccounts() {
+
+        return watchlistRepository.findAll();
     }
 
 
-//}
+
+
+
+}
+
+
+

@@ -6,8 +6,10 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-@Entity(name = "request")
+@Entity
+@Table(name = "request")
 @Data
+//@Getter
 
 public class Request {
     @Id

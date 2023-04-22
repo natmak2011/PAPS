@@ -11,13 +11,8 @@ public class WatchlistCandidatesService {
     //Singleton pattern --> create only one object in memory
     @Autowired  private WatchlistCandidatesRepository watchlistCandidatesRepository;
 
-    //public Wachlist_Candidates createWatchlistCandidates(Wachlist_Candidates wachlist_candidates) {
 
-
-      //  }
-
-
-    public Iterable<Wachlist_Candidates> getAllHits() {
+      public Iterable<Wachlist_Candidates> getAllHits() {
 
         return watchlistCandidatesRepository.findAll();
     }

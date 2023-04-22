@@ -20,4 +20,6 @@ public class WatchlistCandidatesController {
     public Iterable<Wachlist_Candidates> getAllRequests() {
         return watchlistCandidatesService.getAllHits();
     }
+
+
 }
